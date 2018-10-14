@@ -5,8 +5,8 @@
  * Date: 2018/10/14
  * Time: 9:36
  */
-$name = $_POST["username"];
-$pwd = $_POST["password"];
+//$name = $_POST["username"];
+//$pwd = $_POST["password"];
 //$sex = $_POST["sex"];
 //$hobby = $_POST["hobby"];
 //$type = $_POST["type"];
@@ -18,3 +18,17 @@ $pwd = $_POST["password"];
 //}else{
 //    echo "用户名或密码错误";
 //}
+$name = $_POST["username"];
+$pwd1 = $_POST["pwd1"];
+$pwd2 = $_POST["pwd2"];
+if ($name == ""){
+    echo "name-err";
+}elseif($pwd1 == ""){
+    echo "pwd1-err";
+}elseif($pwd2 == ""){
+    echo "pwd2-err";
+}elseif($pwd2 != $pwd1){
+    echo "pwd-err";
+}else{
+    echo "success！";
+}
